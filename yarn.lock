@@ -1633,6 +1633,15 @@
     semver "^7.3.4"
     strip-ansi "^6.0.0"
 
+"@vue/compat@^3.4.21":
+  version "3.4.21"
+  resolved "https://registry.yarnpkg.com/@vue/compat/-/compat-3.4.21.tgz#c15ac3f90eb30c2a0e4fc28251f8590f57a2280a"
+  integrity sha512-hKM6C5tTqduZcNOwp4oBa6qplAQ0NsMvGtLCTKmkhjVqrFzUfS9CyLN6ktzEfPwbgeC/wYYd7PtH+H8jNGvTjQ==
+  dependencies:
+    "@babel/parser" "^7.23.9"
+    estree-walker "^2.0.2"
+    source-map-js "^1.0.2"
+
 "@vue/compiler-core@3.4.21":
   version "3.4.21"
   resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.4.21.tgz#868b7085378fc24e58c9aed14c8d62110a62be1a"
