@@ -1,8 +1,8 @@
-<template>
+<template id="test">
   <div>
     <h1>{{ message }}</h1>
     <p>{{ computedMessage }}</p>
-    <h1>{{ message | capitalize }}</h1>
+    <h1>{{ capitalize(message)  }}</h1>
     <p>{{ computedMessage }}</p>
 
   </div>
@@ -10,7 +10,8 @@
 
 <script>
 import { myMixin } from '../mixins/mixins.js';
-export default {
+import { defineComponent } from 'vue'; // Import defineComponent from Vue 3
+export default defineComponent({
   mixins: [myMixin],
   data() {
     return {
@@ -22,7 +23,7 @@ export default {
       return this.message.toUpperCase();
     },
   },
-  filters: {
+  methods: {
     capitalize(value) {
       return value.charAt(0).toLowerCase() + value.slice(1);
     },
@@ -30,5 +31,5 @@ export default {
   mounted() {
     console.log('Component mounted');
   },
-};
+})
 </script>
