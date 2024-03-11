@@ -2,7 +2,7 @@
   <div>
     <h1>{{ message }}</h1>
     <p>{{ computedMessage }}</p>
-    <h1>{{ message | capitalize }}</h1>
+    <h1>{{ capitalize(message) }}</h1>
     <p>{{ computedMessage }}</p>
 
   </div>
@@ -22,9 +22,9 @@ export default {
       return this.message.toUpperCase();
     },
   },
-  filters: {
+  methods: {
     capitalize(value) {
-      return value.charAt(0).toLowerCase() + value.slice(1);
+      return value.toUpperCase();
     },
   },
   mounted() {
